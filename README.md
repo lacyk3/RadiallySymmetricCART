@@ -1,5 +1,5 @@
 # RadiallySymmetricCART
-This repository houses code used to generate results discussed in the manuscript *Spatiotemporal dynamics of tumor - CAR T cell interaction following local administration in solid cancers. Our reaction-diffusion model for tumor and CAR T cell interaction was solved via finite differences on a radially symmetric domain. The repository is organized as follows:
+This repository houses code used to generate results discussed in the manuscript *Spatiotemporal dynamics of tumor - CAR T cell interaction following local administration in solid cancers*. Our reaction-diffusion model for tumor and CAR T cell interaction was solved via finite differences on a radially symmetric domain. The repository is organized as follows:
 
 ## TumorGrowth: 
 contains code for simulating tumor growth in the absence of treatment
