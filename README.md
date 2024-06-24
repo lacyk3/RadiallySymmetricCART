@@ -26,6 +26,6 @@ contains code for simulating intracavitary administration of CAR T cells to trea
 
 ## Fit to Data:
 contains code used to fit model to murine study data
-  - Zhao et al.
-  - Skovgard et al.
+  - Zhao et al. -- Figure 5A
+  - Skovgard et al. -- Figure 5B
   
