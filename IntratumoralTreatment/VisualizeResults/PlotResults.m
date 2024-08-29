@@ -41,21 +41,22 @@ C0 = sum(4*pi*V(:,1).*(r.').^2)*dr;
 E0 =0*C0/50;
 C = []; T = [];RT = []; E = []; W = zeros(size(V));
 for n = 1:length(U(1,:))
-    C = [C sum(4*pi*V(:,n).*(r.').^2)*dr];
-    T = [T sum(4*pi*U(:,n).*(r.').^2)*dr]; 
-    temp = find(U(:,n)>u_detection);
+    C = [C sum(4*pi*V(:,n).*(r.').^2)*dr]; % total CAR T cells
+    T = [T sum(4*pi*U(:,n).*(r.').^2)*dr];  % total tumor cells
+    temp = find(U(:,n)>u_detection); % where above limit of detection?
     if temp
-        RT = [RT r(temp(end))];
+        RT = [RT r(temp(end))]; % track tumor radius
     else 
         RT = [RT 0];
     end
+    % track exhausted cells generated
     if n == 1
         Ex = zeros(length(U(:,1)),1);
     else
-        Ex = exp(-m.*t(n)).*sum(q*V(:,1:n).*U(:,1:n).*exp(m.*t(1:n)).*dt,2);
+        Ex = exp(-m.*t(n)).*sum(q*V(:,1:n).*U(:,1:n).*exp(m.*t(1:n)).*dt,2); 
     end
     W(:,n) = Ex;
-    E = [E sum(4*pi*Ex.*(r.').^2)*dr+E0*exp(-m.*t(n))];
+    E = [E sum(4*pi*Ex.*(r.').^2)*dr+E0*exp(-m.*t(n))]; % sum up the total exhausted cells
 end
 t = SimResults{idx,4};
 Diameter_init = 2*RT(1);
