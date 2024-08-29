@@ -7,24 +7,25 @@ contains code for simulating tumor growth in the absence of treatment
 - code used to generate tumors of different sizes which were then used to simulate treatment
 - code used to generate Figure S1
 
-## IntratumoralTreatment:
-contains code for simulating intratumoral injection of CAR T cells
-
-- code used to create Figure 3
-- code used to create Figure 6 row 1
-- code used to generate Figure S2A
-- code used to generate Figure S3A
-- code used to generate Figure S4
-- code used to generate Figure S5-6
-
-## IntracavitaryTreatment: 
+## Treatment:
+# IntratumoralSimulations:
+contains code for simulating intratumoral injection of CAR T cells to treat solid tumors
+- code used to generate results underlying Figure 3
+- code used to generate results underlying  Figure 6 row 1
+- code used to generate results underlying  Figure S2A
+- code used to generate results underlying  Figure S3A
+- code used to generate results underlying  Figure S4
+- code used to generate results underlying  Figure S5-6
+# IntracavitarySimulations:
 contains code for simulating intracavitary administration of CAR T cells to treat solid tumors
 - code used to generate Figure 4
 - code used to generate Figure 6 row 2
 - code used to generate Figure S2B
 - code used to generate Figure S3B
+# VisualizeResults:
+contains code for generating the panels in figures 3, 4 and 6, and supplemetary figures S2-6
 
-## Fit to Data:
+# FitToData:
 contains code used to fit model to murine study data
   - Zhao et al. -- Figure 5A
   - Skovgard et al. -- Figure 5B
